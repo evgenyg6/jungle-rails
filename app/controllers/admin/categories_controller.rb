@@ -4,6 +4,7 @@ class Admin::CategoriesController < ApplicationController
     @category = Category.find(params[:id])
     @products = @category.products.order(created_at: :desc)
   end
+
   def index
     @categories = Category.order(:name).all
   end
@@ -16,7 +17,7 @@ class Admin::CategoriesController < ApplicationController
     @category = Category.new(category_params)
 
     if @category.save
-      redirect_to [:admin, :categories], notice: 'Category created!'
+      redirect_to [:admin, :categories], notice: 'Category created.'
     else
       render :new
     end
