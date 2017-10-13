@@ -39,4 +39,24 @@
       <dd><%= eachReview.created_at %></dd>
       </div>
       <% end %>
+
+       <h2>Add a review<h2>
+      <%= form_for [@product, @product.reviews.build] do |f| %>
+        <p>
+          <%= f.label :rating %><br>
+          <%= f.select (:rating) do %>
+            <% [['1', 1], ['2', 2],['3', 3], ['4', 4], ['5', 5]].each do |rating| %>
+              <%= content_tag(:option, rating.first, value: rating.last) %>
+            <% end %>
+          <% end %>
+        </p>
+        <p>
+          <%= f.label :description %><br>
+          <%= f.text_area :description %>
+        </p>
+        <p>
+          <%= f.submit %>
+        </p>
+      <% end %>
+    </div>
 </section>
