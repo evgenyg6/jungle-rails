@@ -25,7 +25,18 @@
         </dl>
       </div>
     </div>
-
-  </article>
-
+</article>
+    <% @reviews.each do |eachReview| %>
+      <div>
+      <% user =  User.find(eachReview.user_id) %>
+      <dt>User:</dt>
+      <dd><%= user.first_name%> <%= user.last_name%></dd>
+      <dt>Review:</dt>
+      <dd><%= eachReview.description %></dd>
+      <dt>Rating:</dt>
+      <dd><%= eachReview.rating %>/5</dd>
+      <dt>Date:</dt>
+      <dd><%= eachReview.created_at %></dd>
+      </div>
+      <% end %>
 </section>
