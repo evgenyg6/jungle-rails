@@ -5,8 +5,8 @@
   </header>
 
   <% if (cart.length == 0) %>
-    <h2>You cannot checkout with an empty cart!</h2>
-    <%= link_to "Home", root_path, class: 'btn btn-lg btn-primary' %>
+    <h2>You cannot checkout with an empty cart! Please add more items.</h2>
+    <%= link_to "Home", [:root], class: 'btn btn-lg btn-primary' %>
   <% else %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
