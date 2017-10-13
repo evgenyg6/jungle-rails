@@ -89,7 +89,7 @@ cat2.products.create!({
   description: Faker::Hipster.paragraph(4),
   image: open_asset('electronics1.jpg'),
   quantity: 40,
-  price: 164.49
+  price: 164.69
 })
 
 cat2.products.create!({
@@ -131,6 +131,30 @@ cat3.products.create!({
   quantity: 0,
   price: 2_483.75
 })
+
+##REVIEWS
+
+Review.create!({
+  product_id: 1,
+  user_id: 1,
+  description: 'dis be broke',
+  rating: 1,
+})
+
+Review.create!({
+  product_id: 2,
+  user_id: 3,
+  description: 'didn\'t know how to use it!',
+  rating: 2,
+})
+
+Review.create!({
+  product_id: 4,
+  user_id: 5,
+  description: 'so good',
+  rating: 5,
+})
+
 
 
 puts "DONE!"
