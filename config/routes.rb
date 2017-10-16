@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     delete :remove_item
   end
 
-  get('/register' => 'users#new')
+  get'/register' => 'users#new'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
