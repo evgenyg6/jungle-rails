@@ -40,12 +40,12 @@
       </div>
       <% end %>
 
-       <h2>Add a review<h2>
+       <h2>Add a review!<h2>
       <%= form_for [@product, @product.reviews.build] do |f| %>
         <p>
           <%= f.label :rating %><br>
           <%= f.select (:rating) do %>
-            <% [['1', 1], ['2', 2],['3', 3], ['4', 4], ['5', 5]].each do |rating| %>
+            <% [['1: Poor', 1], ['2: Needs Improvment', 2],['3: Average', 3], ['4: Good', 4], ['5: Excellent', 5]].each do |rating| %>
               <%= content_tag(:option, rating.first, value: rating.last) %>
             <% end %>
           <% end %>
