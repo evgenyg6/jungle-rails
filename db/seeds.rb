@@ -135,7 +135,7 @@ cat3.products.create!({
 ##TEST USER
 User.create!({
   first_name:"Travis",
-  last_name:"vandermeer",
+  last_name:"vanderqueer",
   email:"travis@outlook.com",
   password:"a"
   })
